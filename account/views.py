@@ -25,5 +25,5 @@ from .forms import LoginForm
 
 @login_required
 def dashboard(request):
-    return render(request, 'account/dashboard.html', {'section': 'dashboard'})
+    return render(request, 'templates/dashboard.html', {'section': 'dashboard'})
 

@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # My apps
     'account',
+    # Django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -124,3 +125,7 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
+
+# This code outputs all emails to the shell when an SMTP server is not available
+# This is for testing during development only--COMMENT THIS OUT FOR PRODUCTION
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
