@@ -17,4 +17,6 @@ path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(temp
 path('reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='account/password_reset_complete.html'), name='password_reset_complete'),
 # User registration view:
 path('register/', views.register, name='register'),
+# User edit profile view:
+path('edit/', views.edit, name='edit'),
 ]
