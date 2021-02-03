@@ -21,6 +21,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('account/', include('account.urls')),
     path('admin/', admin.site.urls),
+    # removed social auth path for now, unable to get Chrome to accept certificate:
+    # path('social-auth/', include('social_django.urls', namespace='social')),
+    path('images/', include('images.urls', namespace='images')),
 ]
 
 if settings.DEBUG:
