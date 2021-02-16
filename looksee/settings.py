@@ -26,7 +26,7 @@ SECRET_KEY = ')^2)j4=$-_(at%&##+h%wgomxq(u)n)*#59d@vuy2&hfl7xais'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -35,6 +35,11 @@ INSTALLED_APPS = [
     # My apps
     'account',
     'images',
+    # Third party apps
+    'sslserver',
+    'social_django',
+    'django_extensions',
+    'easy_thumbnails',
     # Django apps
     'django.contrib.admin',
     'django.contrib.auth',
@@ -139,3 +144,5 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
 ]
+
+THUMBNAIL_DEBUG = True
